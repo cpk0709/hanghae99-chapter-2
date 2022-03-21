@@ -3,20 +3,23 @@ class Card:
         self.num = num
         self.next = next
 
-class CardStack:
-    def __init__(self):
-        # self.bottom = None
-        self.top = None
-
-    def push(self,num):
-        numValue = num
-        numMinus = num-1
-        for _ in range(num-1):
-            self.last = Card(numValue-numMinus,self.last)
-            numMinus += -1
 
 
+#################
+# 정답 뜬 코드
 
+# from collections import deque
+#
+# n = int(input())
+# q = deque([i for i in range(1, n+1)])
+#
+# while len(q) != 1:
+#     q.popleft()
+#     q.append(q.popleft())
+# print(q.pop())
+
+#################
+# 두 번째로 정답 뜬 코드. 좀 더 빠름
 
 a1 = CardStack()
 a1.push(6)
